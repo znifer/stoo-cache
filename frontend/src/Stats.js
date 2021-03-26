@@ -56,8 +56,12 @@ const Stats = () => {
         result.sort((a, b) => {
             const ad = a.date
             const bd = b.date
-            console.log(ad, bd)
-            return true
+            
+            if (parseInt(ad.substring(2, 4)) == parseInt(bd.substring(2, 4))) {
+                return parseInt(ad.substring(2, 4)) - parseInt(bd.substring(2, 4))
+            } else {
+                return parseInt(ad.substring(0, 2)) - parseInt(bd.substring(0, 2))
+            }
         })
         console.log(result)
         return result

@@ -1,13 +1,14 @@
 import requests
-from api_secrets import api_username, api_password
-
+#from api_secrets import api_username, api_password
+api_username = ""
+api_password = ""
 _API_URL = 'https://dekanat.bstu.ru/api/v1/token/'
 
 
 class Token():
     def __init__(self):
         self._token = ''
-        self.login()
+        #self.login()
 
     def login(self):
         resp = requests.post(_API_URL + 'auth/', json={
